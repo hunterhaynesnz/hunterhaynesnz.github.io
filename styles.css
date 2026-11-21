@@ -78,16 +78,18 @@ h1, h2, h3, p { margin-top: 0; }
 .entry-content .entry-sample-note { margin: 20px 0 0; color: #8a8d83; font-family: var(--mono); font-size: 9px; }
 .archive-note { margin: 21px 0 0; color: #85887e; font-size: 10px; font-style: italic; }
 
-.other-section { background: var(--paper); }
-.other-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 85px; }
-.other-heading h2 { margin-bottom: 18px; font-size: clamp(41px, 4.7vw, 55px); }
-.other-heading > p:last-child { max-width: 280px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.85; }
-.other-list { border-top: 1px solid var(--line); }
-.other-item { display: grid; grid-template-columns: 35px minmax(0, 1fr) 20px; align-items: start; gap: 15px; padding: 22px 0; border-bottom: 1px solid var(--line); }
-.other-number { padding-top: 5px; color: #85887e; font-family: var(--mono); font-size: 9px; }
-.other-item h3 { margin: 0 0 4px; font-family: var(--serif); font-size: 21px; font-weight: 400; }
-.other-item p { max-width: 420px; margin: 0; color: var(--muted); font-size: 11px; line-height: 1.7; }
-.other-icon { justify-self: end; padding-top: 3px; color: var(--green); font-size: 14px; }
+.photo-section { background: var(--paper); }
+.photo-heading { display: flex; align-items: end; justify-content: space-between; gap: 35px; margin-bottom: 36px; }
+.photo-heading .eyebrow { margin-bottom: 12px; }
+.photo-heading h2 { margin: 0; font-family: var(--serif); font-size: clamp(43px, 5vw, 60px); font-weight: 400; letter-spacing: -1.7px; line-height: 1.05; }
+.photo-heading > p { max-width: 340px; margin: 0 0 3px; color: var(--muted); font-size: 12px; line-height: 1.85; }
+.photo-wall { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 175px; gap: 14px; }
+.photo-card { position: relative; min-width: 0; margin: 0; overflow: hidden; background: #e9ebe1; }
+.photo-card:nth-child(3n + 1) { grid-row: span 2; }
+.photo-card img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.photo-card figcaption { position: absolute; inset: auto 0 0; padding: 48px 18px 16px; transform: translateY(8px); background: linear-gradient(transparent, rgb(20 25 20 / 78%)); color: white; font-family: var(--serif); font-size: 18px; line-height: 1.3; opacity: 0; transition: opacity .25s ease, transform .25s ease; }
+.photo-card:hover img, .photo-card:focus-visible img { transform: scale(1.04); }
+.photo-card:hover figcaption, .photo-card:focus-visible figcaption { transform: translateY(0); opacity: 1; }
 
 .about-section { background: #e9ebe1; }
 .about-inner { display: grid; grid-template-columns: 1fr 2fr 130px; align-items: start; gap: 35px; }
@@ -148,8 +150,12 @@ h1, h2, h3, p { margin-top: 0; }
   .entry-arrow { grid-column: 2; grid-row: 1 / span 2; }
   .entry-title { font-size: 21px; }
   .entry-content { padding: 0 28px 20px 2px; }
-  .other-layout { grid-template-columns: 1fr; gap: 32px; }
-  .other-heading h2 { font-size: 46px; }
+  .photo-heading { align-items: start; flex-direction: column; gap: 14px; margin-bottom: 27px; }
+  .photo-heading h2 { font-size: 47px; }
+  .photo-heading > p { max-width: 370px; }
+  .photo-wall { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 145px; gap: 10px; }
+  .photo-card:nth-child(3n + 1) { grid-row: span 2; }
+  .photo-card figcaption { padding: 38px 12px 12px; font-size: 15px; }
   .about-inner { grid-template-columns: 1fr; gap: 18px; }
   .about-copy h2 { font-size: 39px; }
   .about-aside { grid-column: auto; justify-self: start; }
@@ -157,6 +163,9 @@ h1, h2, h3, p { margin-top: 0; }
   .site-footer p { grid-column: 1 / -1; grid-row: 2; }
   .site-footer > a:not(.wordmark) { grid-column: 2; grid-row: 1; justify-self: end; }
   .footer-year { grid-column: 1 / -1; grid-row: 3; justify-self: start; }
+}
+@media (hover: none) {
+  .photo-card figcaption { transform: none; opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
