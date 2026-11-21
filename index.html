@@ -1,104 +1,189 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hunter Haynes</title>
-<style>
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  padding: 65px 8%;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #222;
-  background: #fff;
-  max-width: 1100px;
-  margin-inline: auto;
-}
-header {
-  margin-bottom: 65px;
-}
-h1 {
-  font-size: 28px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-.subtitle {
-  color: #777;
-  font-size: 14px;
-}
-h2 {
-  font-size: 17px;
-  font-weight: 600;
-  margin-top: 45px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #ddd;
-}
-ul {
-  list-style: none;
-  padding: 0;
-}
-li {
-  padding: 12px 0;
-  font-size: 14px;
-  line-height: 1.5;
-}
-a {
-  color: #333;
-  text-decoration: none;
-}
-a:hover {
-  color: #888;
-  text-decoration: underline;
-}
-footer {
-  margin-top: 70px;
-  padding-top: 20px;
-  border-top: 1px solid #ddd;
-  color: #999;
-  font-size: 12px;
-}
-</style>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f7f2">
+    <meta name="description" content="Writing and other things by Hunter Haynes.">
+    <title>Hunter Haynes — Writing &amp; other things</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="Hunter Haynes, home">HH<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle-label">Menu</span>
+        <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#writing">Writing</a>
+        <a href="#other-things">Other things</a>
+        <a href="#about">About</a>
+        <a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
 
-<body>
+    <main id="main">
+      <section class="intro section-wrap" id="home">
+        <div class="intro-copy">
+          <p class="eyebrow"><span class="status-dot"></span> A personal notebook on the internet</p>
+          <h1>Hi, I’m Hunter.<br>I write about <em>things</em><br>I can’t stop thinking about.</h1>
+          <p class="intro-text">A home for essays, observations, and the occasional side project. Some things are finished; some are still finding their shape.</p>
+          <a class="intro-link" href="#writing">Read a little <span aria-hidden="true">↓</span></a>
+        </div>
+        <aside class="intro-note" aria-label="A note about this site">
+          <span class="note-mark" aria-hidden="true">✳</span>
+          <p class="eyebrow">A note</p>
+          <p>Written slowly.<br>Updated whenever<br>there’s something to say.</p>
+          <span class="note-caption">EST. 2026 · A WORK IN PROGRESS</span>
+        </aside>
+        <span class="intro-index" aria-hidden="true">01 — 04</span>
+      </section>
 
-<header>
-  <h1>Hunter Haynes</h1>
-  <div class="subtitle">
-    Writer · Researcher · Harvard University
-  </div>
-</header>
+      <section class="writing-section section-pad" id="writing">
+        <div class="section-wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">The archive</p>
+              <h2>Things I’ve <em>written.</em></h2>
+            </div>
+            <p class="section-intro">A few words on whatever’s been taking up space in my head lately.</p>
+          </div>
+          <div class="filter-row" role="group" aria-label="Filter writing by type">
+            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All writing <span>04</span></button>
+            <button class="filter-button" type="button" data-filter="essay" aria-pressed="false">Essays</button>
+            <button class="filter-button" type="button" data-filter="notes" aria-pressed="false">Notes</button>
+            <button class="filter-button" type="button" data-filter="creative" aria-pressed="false">Creative</button>
+          </div>
 
-<main>
+          <div class="writing-list" id="writing-list">
+            <details class="writing-entry" data-category="essay">
+              <summary>
+                <span class="entry-date">01 <span>—</span> ESSAY</span>
+                <span class="entry-main">
+                  <span class="entry-title">The case for paying attention</span>
+                  <span class="entry-description">On noticing the small things, and what they have to tell us.</span>
+                </span>
+                <span class="entry-year">2026</span>
+                <span class="entry-arrow" aria-hidden="true">↗</span>
+              </summary>
+              <div class="entry-content">
+                <p>Attention is a kind of generosity. It asks us to stay with a moment long enough to see it clearly: the light shifting across a room, a familiar voice telling a story we’ve heard before, the thought that arrives when we finally stop trying to have one.</p>
+                <p>I’m trying to practice this more often. Not because every ordinary thing is secretly extraordinary, but because a life is mostly made of ordinary things. It seems worth being there for them.</p>
+                <p class="entry-sample-note">Sample writing — replace this text with your own.</p>
+              </div>
+            </details>
+            <details class="writing-entry" data-category="notes">
+              <summary>
+                <span class="entry-date">02 <span>—</span> NOTE</span>
+                <span class="entry-main">
+                  <span class="entry-title">A list for a slower afternoon</span>
+                  <span class="entry-description">A few things that make an unremarkable day feel like enough.</span>
+                </span>
+                <span class="entry-year">2026</span>
+                <span class="entry-arrow" aria-hidden="true">↗</span>
+              </summary>
+              <div class="entry-content">
+                <p>Open the window. Make something warm. Read the same paragraph twice because the first time you were thinking about tomorrow.</p>
+                <p>Go for a walk without turning it into a task. Come back by a different street. Let the afternoon be an afternoon.</p>
+                <p class="entry-sample-note">Sample writing — replace this text with your own.</p>
+              </div>
+            </details>
+            <details class="writing-entry" data-category="creative">
+              <summary>
+                <span class="entry-date">03 <span>—</span> CREATIVE</span>
+                <span class="entry-main">
+                  <span class="entry-title">The house at the end of the road</span>
+                  <span class="entry-description">A small story about a place that remembers everyone who leaves.</span>
+                </span>
+                <span class="entry-year">2025</span>
+                <span class="entry-arrow" aria-hidden="true">↗</span>
+              </summary>
+              <div class="entry-content">
+                <p>By the time the house came into view, the rain had stopped. It always did, just before the last bend, as if the weather knew better than to follow them all the way home.</p>
+                <p>The porch light was on. It had been on for years.</p>
+                <p class="entry-sample-note">Sample writing — replace this text with your own.</p>
+              </div>
+            </details>
+            <details class="writing-entry" data-category="essay">
+              <summary>
+                <span class="entry-date">04 <span>—</span> ESSAY</span>
+                <span class="entry-main">
+                  <span class="entry-title">Learning to begin before you’re ready</span>
+                  <span class="entry-description">The blank page is less intimidating once you give it something to work with.</span>
+                </span>
+                <span class="entry-year">2025</span>
+                <span class="entry-arrow" aria-hidden="true">↗</span>
+              </summary>
+              <div class="entry-content">
+                <p>I used to think the beginning came after the idea was ready. Once I had the right words, the right plan, the right amount of certainty, then I could start.</p>
+                <p>But a first attempt is not a promise that you already know what you’re doing. It’s how you find out. The beginning can be rough. That’s what makes it a beginning.</p>
+                <p class="entry-sample-note">Sample writing — replace this text with your own.</p>
+              </div>
+            </details>
+          </div>
+          <p class="archive-note">Select a title to read. New entries go at the top.</p>
+        </div>
+      </section>
 
-  <h2>Writing</h2>
-  <ul>
-    <li><a href="#">The 'New' New Zealand: Between Empire, Hegemony and Multilateralism</a></li>
-    <li><a href="#">West Papua and the Failures of Third World Internationalism</a></li>
-    <li><a href="#">The Politics of Anti-Colonial Solidarity</a></li>
-  </ul>
+      <section class="other-section section-pad" id="other-things">
+        <div class="section-wrap other-layout">
+          <div class="other-heading">
+            <p class="eyebrow">Off the page</p>
+            <h2>And a few<br><em>other things.</em></h2>
+            <p>Not everything fits neatly into an essay. Here are a few other things I’m making room for.</p>
+          </div>
+          <div class="other-list">
+            <article class="other-item">
+              <span class="other-number">01</span>
+              <div><h3>Projects</h3><p>Small experiments, useful ideas, and things made just to see if they could be.</p></div>
+              <span class="other-icon" aria-hidden="true">↗</span>
+            </article>
+            <article class="other-item">
+              <span class="other-number">02</span>
+              <div><h3>Reading notes</h3><p>Lines worth keeping, books worth passing along, and thoughts left in the margins.</p></div>
+              <span class="other-icon" aria-hidden="true">✳</span>
+            </article>
+            <article class="other-item">
+              <span class="other-number">03</span>
+              <div><h3>Currently</h3><p>Learning to take my time, asking better questions, and seeing where that leads.</p></div>
+              <span class="other-icon" aria-hidden="true">◎</span>
+            </article>
+          </div>
+        </div>
+      </section>
 
-  <h2>Research</h2>
-  <ul>
-    <li><a href="#">West Papuan Anti-Colonialism, 1954–1969</a></li>
-    <li><a href="#">New Zealand Foreign Policy after the Fall of Singapore</a></li>
-    <li><a href="#">International History and Political Representation</a></li>
-  </ul>
+      <section class="about-section section-pad" id="about">
+        <div class="section-wrap about-inner">
+          <p class="eyebrow">A little about me</p>
+          <div class="about-copy">
+            <h2>I’m interested in <em>people, ideas,</em> and how we make sense of the world around us.</h2>
+            <p>This site is a place to collect the things I write and make. I’ll keep adding to it as I go. Thanks for being here.</p>
+          </div>
+          <span class="about-aside">HUNTER HAYNES<br>ONLINE, SOMEWHERE</span>
+        </div>
+      </section>
 
-  <h2>Other</h2>
-  <ul>
-    <li><a href="mailto:your@email.com">Email</a></li>
-    <li><a href="#">LinkedIn</a></li>
-    <li><a href="#">CV</a></li>
-  </ul>
+      <section class="contact-section section-pad" id="contact">
+        <div class="section-wrap contact-inner">
+          <p class="eyebrow">Say hello</p>
+          <h2>Have something<br>on your <em>mind?</em></h2>
+          <p>Questions, kind notes, book recommendations — my inbox is open.</p>
+          <a class="contact-link" href="mailto:hello@yourdomain.com">Get in touch <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
 
-</main>
-
-<footer>
-  © 2026 Hunter Haynes
-</footer>
-
-</body>
+    <footer class="site-footer">
+      <a class="wordmark" href="#home" aria-label="Back to top">HH<span>.</span></a>
+      <p>A small corner of the internet.</p>
+      <a href="#home">Back to top ↑</a>
+      <span class="footer-year">© <span id="year">2026</span> Hunter Haynes</span>
+    </footer>
+  </body>
 </html>
