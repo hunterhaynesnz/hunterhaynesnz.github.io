@@ -1,5 +1,5 @@
 const filterButtons = document.querySelectorAll(".filter-button");
-const writingCards = document.querySelectorAll(".writing-card");
+const writingEntries = document.querySelectorAll(".writing-entry");
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -11,8 +11,8 @@ filterButtons.forEach((button) => {
       item.setAttribute("aria-pressed", String(isActive));
     });
 
-    writingCards.forEach((card) => {
-      card.hidden = filter !== "all" && card.dataset.category !== filter;
+    writingEntries.forEach((entry) => {
+      entry.hidden = filter !== "all" && entry.dataset.category !== filter;
     });
   });
 });
@@ -30,6 +30,14 @@ siteNav.addEventListener("click", (event) => {
   if (event.target.closest("a")) {
     menuToggle.setAttribute("aria-expanded", "false");
     siteNav.classList.remove("is-open");
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+    menuToggle.setAttribute("aria-expanded", "false");
+    siteNav.classList.remove("is-open");
+    menuToggle.focus();
   }
 });
 
